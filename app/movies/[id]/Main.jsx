@@ -22,6 +22,13 @@ export const Main = ({ data }) => {
                         
                                     <p data-testid='movie-runtime' className='italic'>{data?.runtime} mins</p>
                                 </div>
+                                <ul className="flex flex-wrap gap-x-6 gap-y-3">
+                                    {
+                                        data?.genre.length > 0 ?
+                                            data?.genre.map((g,i)=> <li key={i} className='rounded-full py-2 px-5 text-pink-700 border-solid border-2 border-pink-300'>{g.name}</li> :
+                                            null
+                                    }
+                                </ul>
                                 <div className='flex gap-6 items-center mb-4'>
                                     <p data-testid='movie-release-date'>{data?.release_date}</p>
                                     {/* <p data-testid='movie-release-date'>{new Date(data?.release_date).toUTCString()}</p> */}
