@@ -24,7 +24,7 @@ export const Main = ({ data }) => {
                                 </div>
                                 <ul className="flex flex-wrap gap-x-6 gap-y-3 mb-4">
                                     {
-                                        data?.genres.length > 0 ? data.genres.map((genre,i)=> <li key={i} className='rounded-full py-1 px-5 text-pink-700 border-solid border-2 border-pink-300'>{genre.name}</li>) : null
+                                        data?.genres.length > 0 ? data.genres.map((genre,i)=> <li key={i} className='rounded-full py-[2px] px-4 text-pink-700 border-solid border-2 border-pink-300'>{genre.name}</li>) : null
                                     }
                                 </ul>
                                 <div className='flex gap-6 items-center mb-4'>
